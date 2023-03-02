@@ -1,0 +1,62 @@
+html
+{
+    height: 100%;
+    margin: 0;
+}
+
+.wrapper
+{
+min-height: 100%;
+display: flex;
+flex-direction: column ;
+}
+body
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.header{
+    text-align: center;
+}
+
+main
+{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.top-border
+{
+    border-top: solid 1px red;
+}
+
+.footer{
+    text-align: center;
+}
+
+#login_con{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 10px;
+    margin: 5px;
+}
+
+.login{
+    float: right;
+}
+
+label{
+    float: left;
+}
+
+#submit{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
