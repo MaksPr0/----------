@@ -1,7 +1,6 @@
 <?php 
 session_start(); 
 ?> 
- 
 <!DOCTYPE html> 
 <html lang="en"> 
 <head> 
@@ -11,28 +10,28 @@ session_start();
  <link rel="shortcut icon" href="/img/icon.jpg" type="image/png">
 </head> 
 <body> 
-   <header>
+<header>
       <div>
          <h2 style = "color:white;">TO DO LIST </h2>
       </div>
 </header>
- <form action = "inc/signin.php" method = "post"> 
-  <label>Логин</label>
+ <form action = "inc/signup.php" method = "post"> 
+  <label>Логин</label> 
   <input type = "text" name = "login" placeholder = "Введите логин"> 
   <label>Пароль</label> 
   <input type = "password" name = "password" placeholder = "Введите пароль"> 
-  <button>Войти</button> 
+        <label>Подтвердите пароль</label> 
+  <input type = "password" name = "password_confirm" placeholder = "Введите пароль"> 
+  <button>Зарегистрироваться</button> 
   <p> 
-   <label>У вас нет аккаунта?</label> - <a style = "font-weight: 900;"href = "register.php">Зарегистрируйтесь</a>! 
+   У вас уже есть аккаунт? - <a href = "index.php">Войдите</a>! 
   </p> 
   <?php 
-  ini_set('display_errors', 'off');  
-
-  if (isset($_SESSION["message"])){
-  echo '<p style = "font-weight: 900;"class = "msg">'. $_SESSION['message'] .' </p>'; 
-  }
-  unset($_SESSION["message"]);
-   
+  ini_set('display_errors', 'off'); 
+  if ($_SESSION['message']){ 
+    echo '<p class = "msg">'. $_SESSION['message'] .' </p>'; 
+   }  
+    unset($_SESSION['message']); 
      ?> 
   </form> 
  
